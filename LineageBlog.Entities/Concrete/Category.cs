@@ -11,6 +11,6 @@ namespace LineageBlog.Entities.Concrete
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public ICollection<Article> Articles { get; set; }
+        public ICollection<Article> Articles { get; set; } //Bir kategori birden fazla makaleye(post'a) sahip olabilir.
     }
 }
