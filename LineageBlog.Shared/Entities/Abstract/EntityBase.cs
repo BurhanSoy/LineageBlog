@@ -17,5 +17,6 @@ namespace LineageBlog.Shared.Entities.Abstract
         public virtual bool IsActive { get; set; } = true; //Bu makale ya da bu kullanıcı aktif mi?
         public virtual string CreatedByName { get; set; } = "Admin"; // Blogda kayıt ol kısmı olmayacağı için üye olmayan kullanıcı beğeni veya yorum atması için string
         public virtual string ModifiedByName { get; set; } = "Admin";
+        public virtual string Note { get; set; }
     }
 }
