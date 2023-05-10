@@ -15,7 +15,7 @@ namespace LineageBlog.Shared.Entities.Abstract
         public virtual DateTime ModifiedDate { get; set; } = DateTime.Now;
         public virtual bool IsDeleted { get; set; } = false; // Bu makale ya da kullanıcı silindi mi?
         public virtual bool IsActive { get; set; } = true; //Bu makale ya da bu kullanıcı aktif mi?
-        public virtual string CreatedByName { get; set; } // Blogda kayıt ol kısmı olmayacağı için üye olmayan kullanıcı beğeni veya yorum atması için string
-        public virtual string ModifiedByName { get; set; }
+        public virtual string CreatedByName { get; set; } = "Admin"; // Blogda kayıt ol kısmı olmayacağı için üye olmayan kullanıcı beğeni veya yorum atması için string
+        public virtual string ModifiedByName { get; set; } = "Admin";
     }
 }
