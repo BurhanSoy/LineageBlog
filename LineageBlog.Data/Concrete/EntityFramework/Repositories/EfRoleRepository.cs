@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LineageBlog.Data.Concrete
+namespace LineageBlog.Data.Concrete.EntityFramework.Repositories
 {
     public class RoleRepository : EfEntityRepositoryBase<Role>, IRoleRepository
     {

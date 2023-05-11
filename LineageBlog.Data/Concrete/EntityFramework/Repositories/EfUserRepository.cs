@@ -8,11 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LineageBlog.Data.Concrete
+namespace LineageBlog.Data.Concrete.EntityFramework.Repositories
 {
-    public class CategoryRepository : EfEntityRepositoryBase<Category>, ICategoryRepository
+    public class UserRepository : EfEntityRepositoryBase<User>, IUserRepository
     {
-        public CategoryRepository(DbContext context) : base(context)
+        public UserRepository(DbContext context) : base(context)
         {
         }
     }

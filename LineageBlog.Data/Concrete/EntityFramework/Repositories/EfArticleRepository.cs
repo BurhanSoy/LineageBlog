@@ -5,15 +5,17 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LineageBlog.Data.Concrete
+namespace LineageBlog.Data.Concrete.EntityFramework.Repositories
 {
-    public class UserRepository : EfEntityRepositoryBase<User>, IUserRepository
+    public class EfArticleRepository : EfEntityRepositoryBase<Article>, IArticleRepository
     {
-        public UserRepository(DbContext context) : base(context)
+        public EfArticleRepository(DbContext context) : base(context)
         {
+
         }
     }
 }
