@@ -11,7 +11,7 @@ namespace LineageBlog.Shared.Entities.Abstract
         //Verdiğimiz base değerlerin diğer sınıflarda değişikliğe (override) uğramasını isteyebileceğimiz için abstract
 
         public virtual int Id { get; set; }
-        public virtual DateTime CretedDate { get; set; } = DateTime.Now; //Bu değerlerin override edilmesini istiyorsak virtual olmak zorunda
+        public virtual DateTime CreatedDate { get; set; } = DateTime.Now; //Bu değerlerin override edilmesini istiyorsak virtual olmak zorunda
         public virtual DateTime ModifiedDate { get; set; } = DateTime.Now;
         public virtual bool IsDeleted { get; set; } = false; // Bu makale ya da kullanıcı silindi mi?
         public virtual bool IsActive { get; set; } = true; //Bu makale ya da bu kullanıcı aktif mi?

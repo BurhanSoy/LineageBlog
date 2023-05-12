@@ -1,4 +1,5 @@
-﻿using LineageBlog.Entities.Concrete;
+﻿using LineageBlog.Data.Concrete.EntityFramework.Mappings;
+using LineageBlog.Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,19 @@ namespace LineageBlog.Data.Concrete.EntityFramework.Context
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public LineageBlogContext(DbContextOptions<DbContext> options)
-            : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseSqlServer(@"Data Source=BURHAN;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ArticleMapping());
+            modelBuilder.ApplyConfiguration(new CategoryMapping());
+            modelBuilder.ApplyConfiguration(new CommentMapping());
+            modelBuilder.ApplyConfiguration(new RoleMapping());
+            modelBuilder.ApplyConfiguration(new UserMapping());
+        }
+        //onConfiguring ve onModelCreating metdoları MVC katmanında program.cs içinde uygulanacak.
     }
 }

@@ -20,8 +20,4 @@
     <ProjectReference Include="..\LineageBlog.Shared\LineageBlog.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Concrete\EntityFramework\Mappings\" />
-  </ItemGroup>
-
 </Project>
