@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LineageBlog.Data.Abstract
 {
-    public interface IUnitOfWork:IDisposable
+    public interface IUnitOfWork:IAsyncDisposable
     {
         /*IDisposable (Tek kullanımlık; garbageCollector'a yardımcı olacak)
          *Peki UnitOfWork Design Pattern nedir?
