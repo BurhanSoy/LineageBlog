@@ -1,4 +1,5 @@
 ﻿using LineageBlog.Shared.Entities.Abstract;
+using LineageBlog.Shared.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;

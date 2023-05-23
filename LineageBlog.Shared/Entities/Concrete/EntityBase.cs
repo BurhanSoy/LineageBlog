@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LineageBlog.Shared.Entities.Abstract
+namespace LineageBlog.Shared.Entities.Concrete
 {
     public abstract class EntityBase
     {
